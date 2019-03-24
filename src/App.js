@@ -24,17 +24,17 @@ class App extends Component {
         <div className="introduction">
           <div className="letterContainerOne">
             {lettersLineOne.map(item => (
-              <div className="letters"> {item} </div>
+              <div className="letters" id= {item} > {item} </div>
             ))}
           </div>
           <div className="letterContainerTwo">
             {lettersLineTwo.map(item => (
-              <div className="letters"> {item} </div>
+              <div className="letters" id= {item}> {item} </div>
             ))}
           </div>
           <div className="letterContainerThree">
             {lettersLineThree.map(item => (
-              <div className="letters"> {item} </div>
+              <div className="letters" id= {item}> {item} </div>
             ))}
           </div>
           <div id="one" /> <div id="two" /> <div id="three" />
