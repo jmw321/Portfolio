@@ -1,35 +1,46 @@
-
+.App {
+  width: 100%;
+  margin: auto;
+}
 .introduction {
-  font-size: 50px;
+  font-size: 40px;
   text-align: left;
-  padding-left: 20%;
-  height: 100%;
+  height: 70%;
   min-height: 550px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  background-color: #f2f5f6;
+  margin: auto;
+  background-image: url("./notebook.jpg");
+  width: 90%;
 }
 
-.letterContainerOne {
-  display: flex;
+.lettersContainer {
+  display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 200px;
+  max-width: 980px;
+  height: 80%;
 }
 
-.letterContainerTwo, .letterContainerThree {
-  display: flex;
+.lettersContainer_inner {
+  display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.letterContainerThree {
-  padding-left: 100px;
+.lettersContainer_innersmall {
+  display: none;
 }
+
+.letters-empty {
+  box-shadow: none;
+  margin: 10px;
+  width: 70px;
+}
+
 
 .letters {
   box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
   margin: 10px;
-  width: 80px;
+  width: 70px;
   text-align: center;
   animation-name: flip;
   animation-duration: 3s;
@@ -39,29 +50,6 @@
 }
 
 
-
-#E {
-  animation-delay: 1s;
-}
-
-#L{
-  animation-delay: 2s;
-}
-
-#C {
-  animation-delay: 3s;
-}
-
-#O {
-  animation-delay: 4s;
-}
-
-#I, #M {
-  animation-delay: 5s;
-}
-
-
-
 .sectionTwo {
   display: flex;
   align-content: center;
@@ -69,6 +57,7 @@
   background: rgb(83,96,97);
   background: linear-gradient(90deg, rgba(83,96,97,1) 4%, rgba(216,233,238,1) 100%);
   color: white;
+  margin: auto;
 }
 
 .aboutMe {
@@ -99,7 +88,7 @@
 
 .portfolio {
   height: 100vh;
-
+   margin: auto;
 }
 
 .portfolio_header {
@@ -140,34 +129,23 @@
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 850px) {
+
+
 
 .introduction {
   font-size: 30px;
   padding: 0;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 
 .sectionTwo {
   height: 100vh;
 }
 
-.letters {
+.letters, .letters-empty {
   max-width: 40px;
-}
-
-.letterContainerOne {
-  padding-left: 140px;
-}
-
-.letterContainerTwo {
-  padding-left: 20px;
-}
-
-.letterContainerThree {
-  flex-wrap: nowrap;
-  padding-left: 85px;
 }
 
 .portfolio_header, .aboutMe_header {
@@ -179,13 +157,34 @@
   margin: auto;
 }
 
+.lettersContainer_innersmall {
+  display: none;
+}
+
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 700px) {
+
 
 .introduction {
   width: 100%;
+}
+
+.lettersContainer {
+  bottom: 10%;
+  height: 50%;
+  position: absolute;
+}
+
+.lettersContainer_inner {
+  display: none;
+}
+
+.lettersContainer_innersmall {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 }

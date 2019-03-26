@@ -10,11 +10,24 @@ var projects = [
   {id: 5, name: "Memory Game"}
 ];
 
-var lettersLineOne = ["W", "E", "L", "C", "O"];
+var letters = [
+  {id: 0, letter: [" ", " ", " ", " ", " ", " ", " ", " ", "A"]},
+  {id: 1, letter: [" ", " ", "W", " ", " ", " ", " ", " ", "B"]},
+  {id: 2, letter: [" ", " ", "E", " ", " ", " ", " ", " ", "O"]},
+  {id: 3, letter: [" ", " ", "L", " ", " ", " ", " ", " ", "U"]},
+  {id: 4, letter: [" ", " ", "C", "O", "N", "T", "A", "C", "T"]},
+  {id: 5, letter: [" ", " ", "O", " ", " ", " ", " "]},
+  {id: 6, letter: ["I", "'", "M", " ", " ", " ", " "]},
+  {id: 7, letter: [" ", "J", "E", "N", "N", "A", " "]},
+  {id: 8, letter: [" ", " ", " ", " ", " ", " ", " "]}
+];
 
-var lettersLineTwo = ["I", "'", "M"];
 
-var lettersLineThree = ["J", "E", "N", "N", "A"];
+var lettersHalf = [
+  {id:0, letter:["H","E","L","L","O"]},
+  {id:1, letter:["I","'","M"]},
+  {id:2, letter:["J","E","N","N","A"]}
+]
 
 class App extends Component {
   render() {
@@ -22,22 +35,104 @@ class App extends Component {
       <div className="App">
         <header />
         <div className="introduction">
-          <div className="letterContainerOne">
-            {lettersLineOne.map(item => (
-              <div className="letters" id= {item} > {item} </div>
+          <div className="lettersContainer">
+            <div className="lettersContainer_inner">
+              {letters[0].letter.map(item =>
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              )}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[1].letter.map(item =>
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              )}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[2].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[3].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[4].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[5].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[6].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[7].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+            <div className="lettersContainer_inner">
+              {" "}
+              {letters[8].letter.map(item => (
+                item !== " " ?
+                <div className="letters"> {item} </div>:
+                <div className="letters-empty"> {item} </div>
+              ))}
+            </div>
+
+            <div className="lettersContainer_innersmall">
+             {lettersHalf[0].letter.map(item => (
+              item !== " " ?
+              <div className="letters"> {item} </div>:
+              <div className="letters-empty"> {item} </div>
             ))}
-          </div>
-          <div className="letterContainerTwo">
-            {lettersLineTwo.map(item => (
-              <div className="letters" id= {item}> {item} </div>
+            </div>
+            <div className="lettersContainer_innersmall">
+             {lettersHalf[1].letter.map(item => (
+              item !== " " ?
+              <div className="letters"> {item} </div>:
+              <div className="letters-empty"> {item} </div>
             ))}
-          </div>
-          <div className="letterContainerThree">
-            {lettersLineThree.map(item => (
-              <div className="letters" id= {item}> {item} </div>
+            </div>
+            <div className="lettersContainer_innersmall">
+             {lettersHalf[2].letter.map(item => (
+              item !== " " ?
+              <div className="letters"> {item} </div>:
+              <div className="letters-empty"> {item} </div>
             ))}
+            </div>
+
+
+
           </div>
-          <div id="one" /> <div id="two" /> <div id="three" />
         </div>
         <div className="sectionTwo">
           <div className="aboutMe">
