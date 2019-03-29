@@ -90,6 +90,8 @@
 .portfolio {
   height: 100vh;
    margin: auto;
+   background-size: cover;
+
 }
 
 .portfolio_header {
@@ -114,6 +116,7 @@
 
 .portfolio_items {
   margin: auto;
+  background-color: white;
   min-width: 300px;
   min-height: 150px;
   max-height: 250px;
@@ -121,6 +124,10 @@
   width: 27%;
   margin-top: 10px;
   box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.portfolio_list_images {
+  width: 100%;
 }
 
 @keyframes flip {

@@ -1,10 +1,16 @@
 import React, {Component} from "react";
 import "./App.css";
+import Task from "./Taskboard.jpg";
+import Uv from "./uvtracknew.jpg";
+import Hoa from "./cvhoa.jpg";
+
+
+
 
 var projects = [
-  {id: 0, name: "Task Board"},
-  {id: 1, name: "HOA"},
-  {id: 2, name: "UV Index App"},
+  {id: 0, name: "Task Board", image:Task},
+  {id: 1, name: "HOA", image:Hoa},
+  {id: 2, name: "UV Index App", image: Uv},
   {id: 3, name: "Arcade Game"},
   {id: 4, name: "Neighborhood App"},
   {id: 5, name: "Memory Game"}
@@ -30,7 +36,11 @@ var lettersHalf = [
 ]
 
 class App extends Component {
+
+
   render() {
+
+
     return (
       <div className="App">
         <header />
@@ -154,8 +164,7 @@ class App extends Component {
           <ul className="portfolio_list">
             {projects.map(item => (
               <li id={item.id} className="portfolio_items">
-                {" "}
-                {item.name}{" "}
+                <img src={item.image} alt={item.name} className="portfolio_list_images" />
               </li>
             ))}
           </ul>
