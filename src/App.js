@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./App.css";
 import Task from "./Taskboard.jpg";
 import Uv from "./uvtracknew.jpg";
-import Hoa from "./cvhoa.jpg";
+import Hoa from "./hoa.jpg";
 
 
 
@@ -10,7 +10,7 @@ import Hoa from "./cvhoa.jpg";
 var projects = [
   {id: 0, name: "Task Board", image:Task},
   {id: 1, name: "HOA", image:Hoa},
-  {id: 2, name: "UV Index App", image: Uv},
+  {id: 2, name: "UV Index App", image:Uv},
   {id: 3, name: "Arcade Game"},
   {id: 4, name: "Neighborhood App"},
   {id: 5, name: "Memory Game"}
